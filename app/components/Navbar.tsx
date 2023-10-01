@@ -12,9 +12,12 @@ const Navbar = () => {
 
 	return (
 		<div className='flex justify-between items-center bg-dark-bg bg-opacity-20 backdrop-blur-sm h-24 px-36'>
-			<h1 className='text-transparent font-bold text-lg bg-clip-text bg-gradient-to-r from-purple-500  to-sky-600'>
+			<Link
+				href={navbarItems[0].path}
+				className='text-transparent font-bold text-lg bg-clip-text bg-gradient-to-r from-purple-500  to-sky-600 hover:animate-pulse'
+			>
 				markiianB();
-			</h1>
+			</Link>
 			<ul className='flex list-none'>
 				{navbarItems.map(item => (
 					<li
