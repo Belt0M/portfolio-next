@@ -16,6 +16,9 @@ const config: Config = {
 			colors: {
 				'dark-bg': '#121212',
 			},
+			boxShadow: {
+				'lg-center': '0 0 50px 10px rgba(139, 92, 246, 0.3)',
+			},
 		},
 	},
 	plugins: [],

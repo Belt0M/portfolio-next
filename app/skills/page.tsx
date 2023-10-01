@@ -1,5 +1,5 @@
 const SkillsPage = () => {
-	return <div>SkillsPage</div>
+	return <main>SkillsPage</main>
 }
 
 export default SkillsPage
