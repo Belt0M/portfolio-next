@@ -1,6 +1,8 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { AiFillGithub } from 'react-icons/ai'
+import { BsLinkedin } from 'react-icons/bs'
 import { navbarItems } from '../data/navbar.data'
 
 const Navbar = () => {
@@ -28,7 +30,14 @@ const Navbar = () => {
 					</li>
 				))}
 			</ul>
-			<div className='w-28'></div>
+			<div className='w-28 flex justify-end text-3xl'>
+				<a href='https://github.com/Belt0M' target='_blank'>
+					<AiFillGithub className='hover:text-violet-600 transition-all' />
+				</a>
+				<a href='https://www.linkedin.com/in/beltom/' target='_blank'>
+					<BsLinkedin className='mx-4 hover:text-blue-600 transition-all text-2xl mt-1' />
+				</a>
+			</div>
 		</div>
 	)
 }
