@@ -5,6 +5,7 @@ import { BsFiletypeHtml } from 'react-icons/bs'
 import SkillItem from '../components/SkillItem'
 import SwitchButtons from '../components/SwitchButtons'
 import { SwitchOptions } from '../types/ISwitchButton'
+import { skillsData, toolsData } from '../data/skills'
 
 const SkillsPage: NextPage = () => {
 	const [selected, setSelected] = useState<SwitchOptions>(SwitchOptions.stack)
@@ -18,11 +19,7 @@ const SkillsPage: NextPage = () => {
 				</header>
 				<SwitchButtons selected={selected} setSelected={setSelected} />
 				<section className='mt-6'>
-					<SkillItem
-						icon={<BsFiletypeHtml />}
-						name={'HTML'}
-						level={'Advanced'}
-					/>
+					{selected === SwitchOptions.stack ? skillsData.map(skill => <SkillItem skill={skill} key={skill.name}/>) : toolsData.map(tool => <SkillItem skill={tool} key={tool.name}/>)}
 				</section>
 			</article>
 		</main>
