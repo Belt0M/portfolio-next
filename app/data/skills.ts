@@ -1,97 +1,83 @@
-import { AiFillHtml5 } from 'react-icons/ai'
-import {
-	BiLogoFigma,
-	BiLogoJavascript,
-	BiLogoReact,
-	BiLogoRedux,
-	BiLogoSass,
-	BiLogoTailwindCss,
-	BiLogoTypescript,
-} from 'react-icons/bi'
-import { BsGit } from 'react-icons/bs'
-import { DiNpm } from 'react-icons/di'
-import { FaCss3Alt } from 'react-icons/fa'
-import { GiOctopus } from 'react-icons/gi'
-import { SiGreensock, SiJest } from 'react-icons/si'
-import { TbBrandNextjs } from 'react-icons/tb'
 import { ESkillLevels, ISkill } from '../types/ISkill'
 
 export const skillsData: ISkill[] = [
 	{
-		icon: AiFillHtml5,
+		icon: '/icons/html.png',
 		name: 'HTML',
 		level: ESkillLevels.advanced,
 	},
 	{
-		icon: FaCss3Alt,
+		icon: '/icons/css.png',
 		name: 'CSS',
 		level: ESkillLevels.advanced,
 	},
 	{
-		icon: BiLogoJavascript,
+		icon: '/icons/js.png',
 		name: 'JavaScript',
 		level: ESkillLevels.advanced,
 	},
 	{
-		icon: BiLogoTypescript,
+		icon: '/icons/ts.png',
 		name: 'TypeScript',
 		level: ESkillLevels.intermediate,
 	},
 	{
-		icon: BiLogoReact,
+		icon: '/icons/react.png',
 		name: 'React',
 		level: ESkillLevels.intermediate,
 	},
 	{
-		icon: BiLogoRedux,
+		icon: '/icons/redux.png',
 		name: 'Redux Toolkit',
 		level: ESkillLevels.intermediate,
 	},
 	{
-		icon: TbBrandNextjs,
+		icon: '/icons/next.png',
 		name: 'Next.js',
 		level: ESkillLevels.intermediate,
+		size: 50,
 	},
 	{
-		icon: BiLogoSass,
+		icon: '/icons/sass.png',
 		name: 'SCSS',
 		level: ESkillLevels.intermediate,
 	},
 	{
-		icon: BiLogoTailwindCss,
+		icon: '/icons/tailwind.png',
 		name: 'Tailwind',
 		level: ESkillLevels.intermediate,
 	},
 	{
-		icon: SiJest,
+		icon: '/icons/jest.png',
 		name: 'Jest',
 		level: ESkillLevels.beginner,
 	},
 	{
-		icon: GiOctopus,
+		icon: '/icons/rtl.png',
 		name: 'RTL',
 		level: ESkillLevels.beginner,
 	},
 	{
-		icon: SiGreensock,
+		icon: '/icons/gsap.svg',
 		name: 'GSAP',
 		level: ESkillLevels.beginner,
+		size: 35,
 	},
 ]
 
 export const toolsData: ISkill[] = [
 	{
-		icon: BsGit,
+		icon: '/icons/git.png',
 		name: 'GIT',
 		level: ESkillLevels.intermediate,
 	},
 	{
-		icon: DiNpm,
+		icon: '/icons/npm.png',
 		name: 'npm',
 		level: ESkillLevels.intermediate,
 	},
 	{
-		icon: BiLogoFigma,
+		icon: '/icons/figma.png',
 		name: 'Figma',
 		level: ESkillLevels.intermediate,
 	},

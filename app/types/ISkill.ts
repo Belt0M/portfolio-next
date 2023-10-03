@@ -1,4 +1,3 @@
-import React from 'react'
 export enum ESkillLevels {
 	beginner = 'Beginner',
 	intermediate = 'Intermediate',
@@ -6,7 +5,8 @@ export enum ESkillLevels {
 }
 
 export interface ISkill {
-	icon: React.ReactNode
+	icon: string
 	name: string
 	level: ESkillLevels
+	size?: number
 }

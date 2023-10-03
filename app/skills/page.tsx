@@ -1,11 +1,10 @@
 'use client'
 import { NextPage } from 'next'
 import { useState } from 'react'
-import { BsFiletypeHtml } from 'react-icons/bs'
 import SkillItem from '../components/SkillItem'
 import SwitchButtons from '../components/SwitchButtons'
-import { SwitchOptions } from '../types/ISwitchButton'
 import { skillsData, toolsData } from '../data/skills'
+import { SwitchOptions } from '../types/ISwitchButton'
 
 const SkillsPage: NextPage = () => {
 	const [selected, setSelected] = useState<SwitchOptions>(SwitchOptions.stack)
@@ -18,8 +17,12 @@ const SkillsPage: NextPage = () => {
 					<h1 className='text-2xl font-semibold'>Skills</h1>
 				</header>
 				<SwitchButtons selected={selected} setSelected={setSelected} />
-				<section className='mt-6'>
-					{selected === SwitchOptions.stack ? skillsData.map(skill => <SkillItem skill={skill} key={skill.name}/>) : toolsData.map(tool => <SkillItem skill={tool} key={tool.name}/>)}
+				<section className='mt-6 grid grid-cols-4 gap-8 gap-y-12'>
+					{selected === SwitchOptions.stack
+						? skillsData.map(skill => (
+								<SkillItem skill={skill} key={skill.name} />
+						  ))
+						: toolsData.map(tool => <SkillItem skill={tool} key={tool.name} />)}
 				</section>
 			</article>
 		</main>
