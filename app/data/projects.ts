@@ -4,7 +4,7 @@ export const projectsData: IProject[] = [
 		img: '/img/project1.png',
 		name: 'Personal Website',
 		desc: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
-		stack: ['Next.js', 'Tailwind', 'GASP'],
+		stack: ['Next.js', 'Tailwind', 'GSAP'],
 		links: {
 			git: 'https://github.com/Belt0M/portfolio-next',
 		},
@@ -14,7 +14,7 @@ export const projectsData: IProject[] = [
 		img: '/img/project1.png',
 		name: 'Personal Website',
 		desc: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
-		stack: ['Next.js', 'Tailwind', 'GASP'],
+		stack: ['Next.js', 'Tailwind', 'GSAP'],
 		links: {
 			git: 'https://github.com/Belt0M/portfolio-next',
 			website: 'https://belt0m-dashboard.vercel.app/',
@@ -25,7 +25,7 @@ export const projectsData: IProject[] = [
 		img: '/img/project1.png',
 		name: 'Personal Website',
 		desc: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
-		stack: ['Next.js', 'Tailwind', 'GASP'],
+		stack: ['Next.js', 'Tailwind', 'GSAP'],
 		links: {
 			git: 'https://github.com/Belt0M/portfolio-next',
 		},
@@ -35,7 +35,7 @@ export const projectsData: IProject[] = [
 		img: '/img/project1.png',
 		name: 'Personal Website',
 		desc: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
-		stack: ['Next.js', 'Tailwind', 'GASP'],
+		stack: ['Next.js', 'Tailwind', 'GSAP'],
 		links: {
 			git: 'https://github.com/Belt0M/portfolio-next',
 		},
@@ -45,7 +45,20 @@ export const projectsData: IProject[] = [
 		img: '/img/project1.png',
 		name: 'Personal Website',
 		desc: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
-		stack: ['Next.js', 'Tailwind', 'GASP'],
+		stack: [
+			'Next.js',
+			'Tailwind',
+			'GSAP',
+			'Next.js',
+			'Tailwind',
+			'GSAP',
+			'Next.js',
+			'Tailwind',
+			'GSAP',
+			'Next.js',
+			'Tailwind',
+			'GSAP',
+		],
 		links: {
 			git: 'https://github.com/Belt0M/portfolio-next',
 		},

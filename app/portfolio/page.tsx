@@ -24,7 +24,7 @@ const PortfolioPage: NextPage = () => {
 
 	return (
 		<main>
-			<section>
+			<section className='pb-16'>
 				<div className='flex items-center justify-between pt-6 px-2'>
 					<div className='flex items-center gap-3'>
 						<h1 className='text-2xl font-semibold'>Projects</h1>
@@ -36,8 +36,8 @@ const PortfolioPage: NextPage = () => {
 					/>
 				</div>
 				<div className='grid grid-cols-3 gap-4 p-2 mt-4'>
-					{projects.map(project => (
-						<ProjectItem project={project} key={project.name} />
+					{projects.map((project, index) => (
+						<ProjectItem project={project} key={index} />
 					))}
 				</div>
 			</section>

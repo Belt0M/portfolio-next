@@ -17,3 +17,13 @@ main {
 	min-height: calc(100vh - 6rem);
 	padding: 0 9rem;
 }
+
+::-webkit-scrollbar {
+	width: 0.35rem;
+	margin-top: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #8d0ebc;
+	border-radius: 2rem;
+}
