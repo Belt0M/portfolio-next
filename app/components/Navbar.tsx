@@ -11,7 +11,7 @@ const Navbar = () => {
 		'text-white  before:w-full before:h-1 before:bg-purple-600 before:absolute before:-bottom-2 relative before:rounded-md'
 
 	return (
-		<div className='flex justify-between items-center bg-dark-bg bg-opacity-20 backdrop-blur-sm h-24 px-36'>
+		<div className='flex fixed top-0 right-0 left-0 z-50 justify-between items-center bg-dark-bg bg-opacity-70 backdrop-blur-sm h-24 px-36'>
 			<Link
 				href={navbarItems[0].path}
 				className='text-transparent font-bold text-lg bg-clip-text bg-gradient-to-r from-purple-500  to-sky-600 hover:animate-pulse'

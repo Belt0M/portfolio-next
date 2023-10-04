@@ -16,14 +16,40 @@ body {
 main {
 	min-height: calc(100vh - 6rem);
 	padding: 0 9rem;
+	margin-top: 6rem;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #2f2f2f;
+	border-radius: 10prgb (39, 39, 39);
+	margin: 1rem 0;
 }
 
 ::-webkit-scrollbar {
 	width: 0.35rem;
-	margin-top: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #8d0ebc;
-	border-radius: 2rem;
+	border-radius: 10px;
+	background: hsla(197, 100%, 63%, 1);
+
+	background: linear-gradient(
+		90deg,
+		hsla(197, 100%, 63%, 1) 0%,
+		hsla(294, 100%, 55%, 1) 100%
+	);
+
+	background: -moz-linear-gradient(
+		90deg,
+		hsla(197, 100%, 63%, 1) 0%,
+		hsla(294, 100%, 55%, 1) 100%
+	);
+
+	background: -webkit-linear-gradient(
+		90deg,
+		hsla(197, 100%, 63%, 1) 0%,
+		hsla(294, 100%, 55%, 1) 100%
+	);
+
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#40C9FF", endColorstr="#E81CFF", GradientType=1 );
 }

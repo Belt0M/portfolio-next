@@ -4,7 +4,7 @@ export const projectsData: IProject[] = [
 		img: '/img/project1.png',
 		name: 'Personal Website',
 		desc: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
-		stack: ['Next.js', 'Tailwind', 'GSAP'],
+		stack: ['Next.js', 'Tailwind', 'GSAP', 'Next.js', 'Tailwind'],
 		links: {
 			git: 'https://github.com/Belt0M/portfolio-next',
 		},

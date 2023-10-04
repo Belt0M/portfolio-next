@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { FC } from 'react'
+import { IoMdOpen } from 'react-icons/io'
+import { LuGithub } from 'react-icons/lu'
 import { IProject } from '../types/IProject'
 
 interface IProjectItemProps {
@@ -14,7 +16,7 @@ const ProjectItem: FC<IProjectItemProps> = ({ project }) => {
 		'bg-stack-4',
 	]
 	return (
-		<div className='p-4 min-h-[27rem] bg-sub-dark-bg rounded-lg border-2 border-neutral-700'>
+		<div className='relative p-4 min-h-[27rem] bg-sub-dark-bg rounded-lg border-2 border-neutral-700'>
 			<div className='relative h-52'>
 				<Image
 					src={project.img}
@@ -26,7 +28,7 @@ const ProjectItem: FC<IProjectItemProps> = ({ project }) => {
 			<div>
 				<h1 className='text-center mt-3'>{project.name}</h1>
 				<p className='mt-2 text-sm text-light-gray'>{project.desc}</p>
-				<div className='flex flex-wrap mt-6'>
+				<div className='flex flex-wrap mt-6 pb-5'>
 					{project.stack.map((el, index) => {
 						const bgColor = colors[index % colors.length]
 						return (
@@ -42,6 +44,12 @@ const ProjectItem: FC<IProjectItemProps> = ({ project }) => {
 						)
 					})}
 				</div>
+				{project.links && (
+					<div className='absolute bottom-4 right-6 flex justify-end gap-2 text-white'>
+						<LuGithub className='hover:text-violet-500 transition cursor-pointer' />
+						<IoMdOpen className='hover:text-pink-500 transition cursor-pointer' />
+					</div>
+				)}
 			</div>
 		</div>
 	)
