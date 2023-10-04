@@ -19,6 +19,17 @@ main {
 	margin-top: 6rem;
 }
 
+/* Tailwind Applyes */
+@layer components {
+	.project-before {
+		@apply before:w-0 before:h-0 before:transition-all before:hover:w-32 before:hover:h-32 before:hover:top-3 before:hover:left-3 before:z-20 before:bg-white before:bg-opacity-20 before:absolute before:top-0 before:left-0 before:rounded-bl-xl before:rounded-tr-xl before:duration-300;
+	}
+	.project-after {
+		@apply after:w-0 after:h-0 after:transition-all after:hover:w-32 after:hover:h-32 after:hover:bottom-3 after:hover:right-3 after:z-20 after:bg-white after:bg-opacity-20 after:absolute after:bottom-0 after:right-0 after:rounded-bl-xl after:rounded-tr-xl after:duration-300;
+	}
+}
+
+/* Scrollbar styles */
 ::-webkit-scrollbar-track {
 	background-color: #2f2f2f;
 	border-radius: 10prgb (39, 39, 39);

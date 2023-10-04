@@ -8,7 +8,7 @@ export const projectsData: IProject[] = [
 		links: {
 			git: 'https://github.com/Belt0M/portfolio-next',
 		},
-		date: new Date('17.05.2020'),
+		date: new Date('05.17.2020'),
 	},
 	{
 		img: '/img/project1.png',
@@ -39,7 +39,7 @@ export const projectsData: IProject[] = [
 		links: {
 			git: 'https://github.com/Belt0M/portfolio-next',
 		},
-		date: new Date('13.10.2022'),
+		date: new Date('10.13.2022'),
 	},
 	{
 		img: '/img/project1.png',
@@ -62,6 +62,6 @@ export const projectsData: IProject[] = [
 		links: {
 			git: 'https://github.com/Belt0M/portfolio-next',
 		},
-		date: new Date('13.11.2022'),
+		date: new Date('11.13.2022'),
 	},
 ]

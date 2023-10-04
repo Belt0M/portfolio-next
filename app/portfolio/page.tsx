@@ -1,6 +1,6 @@
 'use client'
 import { NextPage } from 'next'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import ProjectItem from '../components/ProjectItem'
 import SortingItems from '../components/SortingItems'
 import { projectsData } from '../data/projects'
@@ -13,15 +13,6 @@ const PortfolioPage: NextPage = () => {
 	)
 	const [projects, setProjects] = useState<IProject[]>(projectsData)
 
-	useEffect(() => {
-		if (sortingType === ESortingItems.latest) {
-			const sorted = projects.sort((a, b) =>
-				a.date > b.date ? 1 : a.date < b.date ? -1 : 0
-			)
-			setProjects(sorted)
-		}
-	}, [sortingType, projects])
-
 	return (
 		<main>
 			<section className='pb-16'>
@@ -33,6 +24,7 @@ const PortfolioPage: NextPage = () => {
 					<SortingItems
 						sortingType={sortingType}
 						setSortingType={setSortingType}
+						setProjects={setProjects}
 					/>
 				</div>
 				<div className='grid grid-cols-3 gap-4 p-2 mt-4'>

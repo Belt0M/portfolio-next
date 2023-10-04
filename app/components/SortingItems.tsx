@@ -1,17 +1,36 @@
 'use client'
 import { Dispatch, FC, SetStateAction } from 'react'
+import { projectsData } from '../data/projects'
+import { IProject } from '../types/IProject'
 import { ESortingItems, ISort } from '../types/ISort'
 
 interface ISortingItems {
 	sortingType: ESortingItems
 	setSortingType: Dispatch<SetStateAction<ESortingItems>>
+	setProjects: Dispatch<SetStateAction<IProject[]>>
 }
 
-const SortingItems: FC<ISortingItems> = ({ sortingType, setSortingType }) => {
+const SortingItems: FC<ISortingItems> = ({
+	sortingType,
+	setSortingType,
+	setProjects,
+}) => {
 	const sortingItems: ISort[] = [
 		{ name: ESortingItems.all },
 		{ name: ESortingItems.latest },
 	]
+
+	const handleClick = (name: ESortingItems) => {
+		setSortingType(name)
+		if (name === ESortingItems.latest) {
+			const sorted = [...projectsData].sort(
+				(a, b) => Number(b.date) - Number(a.date)
+			)
+			setProjects(sorted.slice(0, 3))
+		} else {
+			setProjects(projectsData)
+		}
+	}
 
 	return (
 		<ul className='list-none flex items-center'>
@@ -23,7 +42,7 @@ const SortingItems: FC<ISortingItems> = ({ sortingType, setSortingType }) => {
 							? 'text-violet-500 hover:text-violet-500'
 							: 'text-gray-500'
 					}`}
-					onClick={() => setSortingType(item.name)}
+					onClick={() => handleClick(item.name)}
 				>
 					{item.name}
 				</li>
