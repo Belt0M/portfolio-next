@@ -10,7 +10,7 @@ interface IProjectItemProps {
 }
 
 const ProjectItem: FC<IProjectItemProps> = ({ project }) => {
-	const { name, desc, img, stack, links, date } = project
+	const { name, desc, img, stack, links } = project
 
 	return (
 		<div
@@ -18,10 +18,16 @@ const ProjectItem: FC<IProjectItemProps> = ({ project }) => {
 			hover:before:w-full hover:before:left-0 hover:before:bg-violet-500'
 		>
 			<div className='relative h-52'>
-				<Image src={img} alt={name} fill className='rounded-lg' />
+				<Image
+					src={img}
+					alt={name}
+					fill
+					className='rounded-lg'
+					style={{ objectFit: 'cover' }}
+				/>
 			</div>
 			<div>
-				<h1 className='text-center mt-3'>{date.toLocaleDateString()}</h1>
+				<h1 className='text-center mt-3'>{name}</h1>
 				<p className='mt-2 text-sm text-light-gray'>{desc}</p>
 				<div className='flex flex-wrap mt-6 pb-5'>
 					{stack.map((el, index) => (
