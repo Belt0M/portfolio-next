@@ -1,5 +1,7 @@
 'use client'
+import { motion } from 'framer-motion'
 import { Dispatch, FC, SetStateAction } from 'react'
+import { skillsBtnVariants, skillsBtnsVariants } from '../framer/skills.variant'
 import { ISwitchButton, SwitchOptions } from '../types/ISwitchButton'
 
 interface ISwitchButtonsProps {
@@ -14,9 +16,15 @@ const SwitchButtons: FC<ISwitchButtonsProps> = ({ selected, setSelected }) => {
 	]
 
 	return (
-		<div className='mt-6'>
+		<motion.div
+			variants={skillsBtnsVariants}
+			initial='hidden'
+			animate='show'
+			className='mt-6'
+		>
 			{btns.map(btn => (
-				<button
+				<motion.button
+					variants={skillsBtnVariants}
 					onClick={() => setSelected(btn.enum)}
 					className={`px-4 py-3 text-sm text-gray-400 hover:text-white transition bg-opacity-40 rounded-md ${
 						selected === btn.enum && 'bg-purple-900 text-violet-500'
@@ -24,9 +32,9 @@ const SwitchButtons: FC<ISwitchButtonsProps> = ({ selected, setSelected }) => {
 					key={btn.name}
 				>
 					{btn.name}
-				</button>
+				</motion.button>
 			))}
-		</div>
+		</motion.div>
 	)
 }
 
