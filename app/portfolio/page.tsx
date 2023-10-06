@@ -1,9 +1,15 @@
 'use client'
+import { motion } from 'framer-motion'
 import { NextPage } from 'next'
 import { useState } from 'react'
 import ProjectItem from '../components/ProjectItem'
 import SortingItems from '../components/SortingItems'
 import { projectsData } from '../data/projects'
+import {
+	portfolioItemVariants,
+	portfolioItemsVariants,
+	portfoliosHeadingVariants,
+} from '../framer/portfolio.variants'
 import { IProject } from '../types/IProject'
 import { ESortingItems } from '../types/ISort'
 
@@ -17,21 +23,33 @@ const PortfolioPage: NextPage = () => {
 		<main>
 			<section className='pb-16'>
 				<div className='flex items-center justify-between pt-6 px-2'>
-					<div className='flex items-center gap-3'>
+					<motion.div
+						variants={portfoliosHeadingVariants}
+						initial='hidden'
+						animate='show'
+						className='flex items-center gap-3'
+					>
 						<h1 className='text-2xl font-semibold'>Projects</h1>
 						<div className='h-0.5 w-60 bg-violet-500' />
-					</div>
+					</motion.div>
 					<SortingItems
 						sortingType={sortingType}
 						setSortingType={setSortingType}
 						setProjects={setProjects}
 					/>
 				</div>
-				<div className='grid grid-cols-3 gap-4 p-2 mt-4'>
+				<motion.div
+					variants={portfolioItemsVariants}
+					initial='hidden'
+					animate='show'
+					className='grid grid-cols-3 gap-4 p-2 mt-4'
+				>
 					{projects.map((project, index) => (
-						<ProjectItem project={project} key={index} />
+						<motion.div variants={portfolioItemVariants} key={index}>
+							<ProjectItem project={project} />
+						</motion.div>
 					))}
-				</div>
+				</motion.div>
 			</section>
 		</main>
 	)

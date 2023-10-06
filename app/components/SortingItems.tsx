@@ -1,6 +1,11 @@
 'use client'
+import { motion } from 'framer-motion'
 import { Dispatch, FC, SetStateAction } from 'react'
 import { projectsData } from '../data/projects'
+import {
+	portfolioSortVariants,
+	portfolioSortsVariants,
+} from '../framer/portfolio.variants'
 import { IProject } from '../types/IProject'
 import { ESortingItems, ISort } from '../types/ISort'
 
@@ -33,9 +38,15 @@ const SortingItems: FC<ISortingItems> = ({
 	}
 
 	return (
-		<ul className='list-none flex items-center'>
+		<motion.ul
+			variants={portfolioSortsVariants}
+			initial='hidden'
+			animate='show'
+			className='list-none flex items-center'
+		>
 			{sortingItems.map(item => (
-				<li
+				<motion.li
+					variants={portfolioSortVariants}
 					key={item.name}
 					className={`p-2 uppercase text-sm hover:text-gray-400 transition cursor-pointer ${
 						item.name === sortingType
@@ -45,9 +56,9 @@ const SortingItems: FC<ISortingItems> = ({
 					onClick={() => handleClick(item.name)}
 				>
 					{item.name}
-				</li>
+				</motion.li>
 			))}
-		</ul>
+		</motion.ul>
 	)
 }
 
