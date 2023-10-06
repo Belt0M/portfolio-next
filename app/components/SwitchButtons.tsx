@@ -26,8 +26,9 @@ const SwitchButtons: FC<ISwitchButtonsProps> = ({ selected, setSelected }) => {
 				<motion.button
 					variants={skillsBtnVariants}
 					onClick={() => setSelected(btn.enum)}
-					className={`px-4 py-3 text-sm text-gray-400 hover:text-white transition bg-opacity-40 rounded-md ${
-						selected === btn.enum && 'bg-purple-900 text-violet-500'
+					className={`px-4 py-3 text-sm dark:text-gray-400 text-gray-500 dark:hover:text-white hover:text-gray-700 transition dark:bg-opacity-40 bg-opacity-10 rounded-md ${
+						selected === btn.enum &&
+						'bg-purple-900 text-violet-500 hover:text-violet-700'
 					}`}
 					key={btn.name}
 				>

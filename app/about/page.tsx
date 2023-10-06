@@ -17,7 +17,7 @@ const AboutPage: NextPage = () => {
 				variants={aboutDivVariants}
 				initial='hidden'
 				animate='show'
-				className='bg-sub-dark-bg rounded-3xl border-zinc-700 border-2 p-12 mb-10'
+				className='dark:bg-sub-dark-bg rounded-3xl bg-sub-light-bg dark:border-zinc-700 border-gray-200 border-2 p-12 mb-10'
 			>
 				<motion.header
 					variants={aboutHeadingVariants}

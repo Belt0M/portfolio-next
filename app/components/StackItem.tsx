@@ -13,7 +13,7 @@ const StackItem: FC<IStackItemProps> = ({ skill, index }) => {
 			key={index}
 			className={
 				bgColor +
-				' py-2 px-3 rounded-md font-semibold mr-2 text-sm bg-opacity-30 mb-2 text-gray-300 hover:bg-opacity-40 transition cursor-pointer'
+				' py-2 px-3 rounded-md dark:font-semibold mr-2 text-sm dark:bg-opacity-30 bg-opacity-60 mb-2 dark:text-gray-300 text-gray-800 hover:bg-opacity-40 transition cursor-pointer'
 			}
 		>
 			{skill}

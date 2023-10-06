@@ -9,6 +9,11 @@
 }
 
 body {
+	background-color: #f9f9f9;
+	color: #000000;
+}
+
+body.dark {
 	background-color: #121212;
 	color: #fff;
 }
