@@ -45,7 +45,12 @@ const PortfolioPage: NextPage = () => {
 					className='grid grid-cols-3 gap-4 p-2 mt-4'
 				>
 					{projects.map((project, index) => (
-						<motion.div variants={portfolioItemVariants} key={index}>
+						<motion.div
+							variants={portfolioItemVariants}
+							key={index}
+							className='relative p-4 min-h-[27rem] dark:bg-sub-dark-bg rounded-lg border-2 dark:border-neutral-700 shadow-md cursor-pointer before:w-0 before:h-1 before:absolute before:bottom-0 before:right-0 before:bg-blue-400 before:transition-all before:duration-500
+							hover:before:w-full hover:before:left-0 hover:before:bg-violet-500'
+						>
 							<ProjectItem project={project} />
 						</motion.div>
 					))}

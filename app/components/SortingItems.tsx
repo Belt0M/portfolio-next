@@ -48,10 +48,10 @@ const SortingItems: FC<ISortingItems> = ({
 				<motion.li
 					variants={portfolioSortVariants}
 					key={item.name}
-					className={`p-2 uppercase text-sm dark:hover:text-gray-400 transition cursor-pointer ${
+					className={`p-2 uppercase text-sm transition cursor-pointer ${
 						item.name === sortingType
 							? 'text-violet-500 hover:text-violet-500'
-							: 'text-gray-500 hover:text-gray-700 '
+							: 'text-gray-500 hover:text-gray-700 dark:hover:text-gray-400'
 					}`}
 					onClick={() => handleClick(item.name)}
 				>
