@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { AiFillGithub } from 'react-icons/ai'
 import { BsLinkedin } from 'react-icons/bs'
@@ -10,17 +9,13 @@ import { navbarItems } from '../data/navbar.data'
 import {
 	navbarIconVariants,
 	navbarIconsVariants,
-	navbarLiVariants,
 	navbarLogoVariants,
-	navbarUlVariants,
 } from '../framer/navbar.variants'
 import { ETheme } from '../types/ETheme'
+import NavbarItems from './NavbarItems'
 
 const Navbar = () => {
-	const currentPath = usePathname()
 	const ref = useRef<HTMLDivElement>(null)
-	const activeStyles =
-		'text-gray-800 dark:text-white  before:w-full before:h-1 before:bg-purple-600 before:absolute before:-bottom-2 relative before:rounded-md'
 
 	const [theme, setTheme] = useState<ETheme>(ETheme.dark)
 
@@ -55,27 +50,7 @@ const Navbar = () => {
 					markiianB();
 				</Link>
 			</motion.h1>
-			<motion.ul
-				variants={navbarUlVariants}
-				initial='hidden'
-				animate='show'
-				className='hidden md:flex list-none'
-			>
-				{navbarItems.map((item, index) => (
-					<motion.li
-						key={item.name}
-						className='px-4 dark:text-gray-400 text-gray-500 hover:text-gray-800 dark:hover:text-gray-300 transition-all text-[.9rem] font-semibold'
-						variants={navbarLiVariants}
-					>
-						<Link
-							href={item.path}
-							className={currentPath === item.path ? activeStyles : ''}
-						>
-							{item.name}
-						</Link>
-					</motion.li>
-				))}
-			</motion.ul>
+			<NavbarItems />
 			<motion.div
 				variants={navbarIconsVariants}
 				initial='hidden'
