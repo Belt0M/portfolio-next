@@ -45,7 +45,7 @@ const Navbar = () => {
 	return (
 		<div
 			ref={ref}
-			className='flex fixed top-0 right-0 left-0 z-50 justify-between items-center dark:bg-dark-bg bg-sub-light-bg dark:bg-opacity-70 shadow-sm backdrop-blur-sm h-24 px-36'
+			className='flex fixed top-0 right-0 left-0 z-50 justify-between items-center dark:bg-dark-bg bg-sub-light-bg dark:bg-opacity-70 shadow-sm backdrop-blur-sm h-24 px-6 md:p-12 lg:px-36'
 		>
 			<motion.h1 variants={navbarLogoVariants} initial='hidden' animate='show'>
 				<Link
@@ -59,7 +59,7 @@ const Navbar = () => {
 				variants={navbarUlVariants}
 				initial='hidden'
 				animate='show'
-				className='flex list-none'
+				className='hidden md:flex list-none'
 			>
 				{navbarItems.map((item, index) => (
 					<motion.li
