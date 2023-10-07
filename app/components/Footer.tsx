@@ -13,7 +13,7 @@ const Footer: FC = () => {
 	const currentPath = usePathname()
 
 	return (
-		<footer className='fixed bottom-0 w-full flex items-center justify-center pt-2 pb-3 border-t-2 border-gray-500 border-opacity-40 md:hidden'>
+		<footer className='fixed bottom-0 w-full flex items-center justify-center pt-2 pb-3 border-t-2 border-gray-500 border-opacity-40 bg-dark-bg md:hidden'>
 			<motion.ul
 				variants={navbarUlVariants}
 				initial='hidden'
