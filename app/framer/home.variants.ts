@@ -1,9 +1,9 @@
 import { Variants } from 'framer-motion'
 
 export const homeImgVariants: Variants = {
-	hidden: { x: '70%', opacity: 0 },
+	hidden: { x: 100, opacity: 0 },
 	show: {
-		x: '0%',
+		x: 0,
 		opacity: 1,
 		transition: {
 			delay: 0.35,
