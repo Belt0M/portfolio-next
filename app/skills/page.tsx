@@ -44,7 +44,17 @@ const SkillsPage: NextPage = () => {
 									<SkillItem skill={skill} />
 								</motion.div>
 						  ))
-						: toolsData.map(tool => <SkillItem skill={tool} key={tool.name} />)}
+						: toolsData.map(tool => (
+								<motion.div
+									variants={skillsItemVariants}
+									animate='show'
+									initial='hidden'
+									key={tool.name}
+									className='group flex items-center md:w-60 sm:w-60 xs:w-52 w-[100%] scale-90 h-20 border-2 rounded-md border-violet-500 md:py-4 py-0 md:px-2 px-3 hover:bg-violet-500 hover:bg-opacity-10 transition cursor-pointer md:gap-2 sm:gap-6 gap-3'
+								>
+									<SkillItem skill={tool} />
+								</motion.div>
+						  ))}
 				</motion.section>
 			</article>
 		</main>
