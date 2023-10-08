@@ -36,9 +36,8 @@ export const navbarIconsVariants: Variants = {
 	show: {
 		opacity: 1,
 		transition: {
-			staggerChildren: 0.25,
-			type: 'spring',
-			bounce: 0.5,
+			staggerChildren: 0.4,
+			delayChildren: 0.3,
 		},
 	},
 }

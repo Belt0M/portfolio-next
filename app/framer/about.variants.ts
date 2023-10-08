@@ -1,12 +1,13 @@
 import { Variants } from 'framer-motion'
 
 export const aboutDivVariants: Variants = {
-	hidden: { opacity: 0 },
+	hidden: { opacity: 0, x: 50 },
 	show: {
 		opacity: 1,
+		x: 0,
 		transition: {
-			delay: 0.2,
-			duration: 0.4,
+			delay: 0.5,
+			duration: 0.5,
 		},
 	},
 }
@@ -17,8 +18,8 @@ export const aboutHeadingVariants: Variants = {
 		x: 0,
 		opacity: 1,
 		transition: {
-			delay: 0.35,
-			duration: 0.3,
+			delay: 0.9,
+			duration: 0.25,
 		},
 	},
 }
@@ -29,7 +30,7 @@ export const aboutImgVariants: Variants = {
 		y: 0,
 		opacity: 1,
 		transition: {
-			delay: 0.5,
+			delay: 1,
 			duration: 0.5,
 		},
 	},
@@ -40,8 +41,9 @@ export const aboutTextVariants: Variants = {
 	show: {
 		opacity: 1,
 		transition: {
-			staggerChildren: 1,
-			delay: 0.5,
+			staggerChildren: 0.3,
+			delayChildren: 0.9,
+			delay: 0.9,
 		},
 	},
 }

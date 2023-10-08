@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FC } from 'react'
 import { navbarItems } from '../data/navbar.data'
-import { navbarLiVariants, navbarUlVariants } from '../framer/navbar.variants'
+import { footerLiVariants, footerUlVariants } from '../framer/footer.variants'
 
 const Footer: FC = () => {
 	const activeStyles =
@@ -15,7 +15,7 @@ const Footer: FC = () => {
 	return (
 		<footer className='fixed bottom-0 w-full flex items-center justify-center pt-2 pb-3 border-t-2 border-gray-500 border-opacity-40 dark:bg-dark-bg bg-light-bg shadow-sm md:hidden'>
 			<motion.ul
-				variants={navbarUlVariants}
+				variants={footerUlVariants}
 				initial='hidden'
 				animate='show'
 				className='flex list-none'
@@ -24,7 +24,7 @@ const Footer: FC = () => {
 					<motion.li
 						key={item.name}
 						className='p-4 px-6 dark:text-gray-400 text-gray-500 hover:text-gray-800 dark:hover:text-gray-300 transition-all text-[.9rem] font-semibold'
-						variants={navbarLiVariants}
+						variants={footerLiVariants}
 					>
 						<Link
 							href={item.path}

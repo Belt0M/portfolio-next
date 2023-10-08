@@ -21,6 +21,7 @@ body.dark {
 main {
 	padding: 0 1.5rem;
 	margin-top: 7rem;
+	overflow: hidden;
 }
 
 @media only screen and (min-width: 760px) {

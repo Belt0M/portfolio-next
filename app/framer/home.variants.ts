@@ -18,8 +18,8 @@ export const homePVariants: Variants = {
 		y: 0,
 		opacity: 1,
 		transition: {
-			delay: 0.5,
-			duration: 0.3,
+			delay: 0.9,
+			duration: 0.4,
 		},
 	},
 }
@@ -30,8 +30,8 @@ export const homeH1Variants: Variants = {
 		x: 0,
 		opacity: 1,
 		transition: {
-			delay: 0.4,
-			duration: 0.3,
+			delay: 0.8,
+			duration: 0.4,
 		},
 	},
 }
@@ -42,8 +42,8 @@ export const homeH5Variants: Variants = {
 		y: 0,
 		opacity: 1,
 		transition: {
-			delay: 0.3,
-			duration: 0.3,
+			delay: 0.7,
+			duration: 0.4,
 		},
 	},
 }
@@ -53,8 +53,8 @@ export const homeTypingVariants: Variants = {
 	show: {
 		opacity: 1,
 		transition: {
-			delay: 0.4,
-			duration: 0.3,
+			delay: 0.6,
+			duration: 0.4,
 		},
 	},
 }

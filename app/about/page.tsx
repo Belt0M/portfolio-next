@@ -21,6 +21,8 @@ const AboutPage: NextPage = () => {
 			>
 				<motion.header
 					variants={aboutHeadingVariants}
+					initial='hidden'
+					animate='show'
 					className='flex items-center md:gap-4 gap-3'
 				>
 					<h1 className='text-2xl font-semibold'>About Me</h1>
@@ -29,6 +31,8 @@ const AboutPage: NextPage = () => {
 				<section className='flex justify-between md:mt-12 mt-6 items-center md:flex-row flex-col'>
 					<motion.div
 						variants={aboutImgVariants}
+						initial='hidden'
+						animate='show'
 						className='md:w-1/3 w-4/5 md:mr-24 md:ml-12'
 					>
 						<Image
@@ -44,7 +48,7 @@ const AboutPage: NextPage = () => {
 						variants={aboutTextVariants}
 						initial='hidden'
 						animate='show'
-						className='ont-light indent-8 md:w-2/3 text-s md:text-lg md:mt-0 mt-8'
+						className='font-light indent-8 md:w-2/3 text-s md:text-lg md:mt-0 mt-8'
 					>
 						<motion.p variants={aboutPVariants}>
 							{
