@@ -12,7 +12,7 @@ import {
 
 const Home: NextPage = () => {
 	return (
-		<main className='flex items-center justify-start md:flex-row flex-col-reverse'>
+		<main className='flex justify-center items-center md:flex-row flex-col-reverse'>
 			<div className='h-[15rem] w-4/5 md:w-1/3 md:mr-20 text-center md:text-left'>
 				<motion.h5
 					variants={homeH5Variants}

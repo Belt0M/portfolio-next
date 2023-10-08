@@ -20,7 +20,7 @@ const PortfolioPage: NextPage = () => {
 	const [projects, setProjects] = useState<IProject[]>(projectsData)
 
 	return (
-		<main>
+		<main className='pb-12 md:pb-0'>
 			<section className='pb-16'>
 				<div className='flex items-center justify-between pt-6 px-2'>
 					<motion.div
@@ -30,7 +30,7 @@ const PortfolioPage: NextPage = () => {
 						className='flex items-center gap-3'
 					>
 						<h1 className='text-2xl font-semibold'>Projects</h1>
-						<div className='h-0.5 w-60 bg-violet-500' />
+						<div className='h-0.5 md:w-60 SM:w-20 w-12 bg-violet-500' />
 					</motion.div>
 					<SortingItems
 						sortingType={sortingType}
@@ -42,7 +42,7 @@ const PortfolioPage: NextPage = () => {
 					variants={portfolioItemsVariants}
 					initial='hidden'
 					animate='show'
-					className='grid grid-cols-3 gap-4 p-2 mt-4'
+					className='grid xl:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-4 p-2 mt-4'
 				>
 					{projects.map((project, index) => (
 						<motion.div

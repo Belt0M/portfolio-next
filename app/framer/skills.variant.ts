@@ -47,7 +47,8 @@ export const skillsItemsVariants: Variants = {
 		transition: {
 			delay: 0.5,
 			delayChildren: 0.6,
-			staggerChildren: 0.15,
+			staggerChildren: 0.2,
+			duration: 0.6,
 		},
 	},
 }
