@@ -20,6 +20,8 @@ const config: Config = {
 				'light-bg': '#f9f9f9',
 				'sub-light-bg': '#fff',
 				'light-gray': '#c1c1c1',
+				'dark-gray': '#5c5b5c',
+				'dark-gray-hover': '#696869',
 				'stack-1': '#944CF6',
 				'stack-2': '#A742D4',
 				'stack-3': '#E554EB',
