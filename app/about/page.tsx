@@ -37,7 +37,7 @@ const AboutPage: NextPage = () => {
 					>
 						<Image
 							src='https://i.pinimg.com/474x/8d/88/44/8d88444e21011e2901cc12dd377e3211.jpg'
-							alt='Markiian Berehovskyi | Image'
+							alt='Avatar Image'
 							width='350'
 							height='350'
 							className='rounded-full'

@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 			</div>
 			<motion.div variants={homeImgVariants} initial='hidden' animate='show'>
 				<Image
-					alt='Markiian Berehovskyi | Image'
+					alt='Avatar Image'
 					src='https://i.pinimg.com/474x/8d/88/44/8d88444e21011e2901cc12dd377e3211.jpg'
 					width='425'
 					height='425'

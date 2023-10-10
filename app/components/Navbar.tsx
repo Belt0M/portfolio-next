@@ -80,7 +80,7 @@ const Navbar = () => {
 						<Image
 							src='/icons/dark.png'
 							fill
-							alt='Dark Mode'
+							alt='Dark Mode Button'
 							className='hover:scale-105 transition cursor-pointer'
 							onClick={() => handleThemeToggle(ETheme.light)}
 						/>
@@ -88,7 +88,7 @@ const Navbar = () => {
 						<Image
 							src='/icons/light.png'
 							fill
-							alt='Light Mode'
+							alt='Light Mode Button'
 							className='hover:scale-105 transition cursor-pointer'
 							onClick={() => handleThemeToggle(ETheme.dark)}
 						/>
