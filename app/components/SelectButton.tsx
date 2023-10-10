@@ -8,10 +8,12 @@ type Props = {
 }
 
 const SelectButton: FC<Props> = ({ btn, activeBtn, setActiveBtn }) => {
-	const activeStyle = 'text-zinc-400 border-zinc-400'
+	const activeStyle = 'text-zinc-400 border-zinc-400 hover'
 	const style = clsx(
-		activeBtn === btn && activeStyle,
-		'px-4 py-2 border-2 border-dark-gray text-xs hover:border-dark-gray-hover hover:text-dark-gray-hover transition-all'
+		activeBtn === btn
+			? activeStyle
+			: 'hover:border-dark-gray-hover hover:text-dark-gray-hover',
+		'px-4 py-2 border-2 border-dark-gray text-xs transition-all'
 	)
 	return (
 		<button className={style} onClick={() => setActiveBtn(btn)}>

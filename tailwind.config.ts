@@ -21,7 +21,7 @@ const config: Config = {
 				'sub-light-bg': '#fff',
 				'light-gray': '#c1c1c1',
 				'dark-gray': '#5c5b5c',
-				'dark-gray-hover': '#696869',
+				'dark-gray-hover': '#7d7c7d',
 				'stack-1': '#944CF6',
 				'stack-2': '#A742D4',
 				'stack-3': '#E554EB',
