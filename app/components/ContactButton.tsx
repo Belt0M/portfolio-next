@@ -1,20 +1,11 @@
 'use client'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
-import { FC, useEffect } from 'react'
+import { FC } from 'react'
 import { BiSolidContact } from 'react-icons/bi'
 import { modalBtnVariants } from '../framer/modal.variants'
 
 const ContactButton: FC = () => {
-	const router = useRouter()
-	const pathname = usePathname()
-
-	useEffect(() => {
-		router.push(pathname)
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [])
-
 	return (
 		<motion.div
 			variants={modalBtnVariants}
