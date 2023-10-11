@@ -29,6 +29,7 @@ const config: Config = {
 			},
 			boxShadow: {
 				'lg-center': '0 0 50px 10px rgba(139, 92, 246, 0.3)',
+				'dark-center': '0 0 20px 5px #00000010',
 			},
 		},
 	},
