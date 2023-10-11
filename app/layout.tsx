@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
+import { Analytics } from '@vercel/analytics/react'
 import { Poppins } from 'next/font/google'
 import ContactButton from './components/ContactButton'
 import ContactModal from './components/ContactModal'
@@ -31,6 +32,7 @@ export default function RootLayout({
 				<ContactButton />
 				<ContactModal />
 				<Footer />
+				<Analytics />
 			</body>
 		</html>
 	)
