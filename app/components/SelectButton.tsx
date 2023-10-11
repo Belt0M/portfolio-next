@@ -8,7 +8,7 @@ type Props = {
 }
 
 const SelectButton: FC<Props> = ({ btn, activeBtn, setActiveBtn }) => {
-	const activeStyle = 'text-zinc-400 border-zinc-400 hover'
+	const activeStyle = 'text-violet-400 border-violet-400 hover'
 	const style = clsx(
 		activeBtn === btn
 			? activeStyle

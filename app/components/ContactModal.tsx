@@ -4,6 +4,8 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { FC, useEffect, useState } from 'react'
 import { btnsArr } from '../data/contact.data'
 import { modalWindowVariants } from '../framer/modal.variants'
+import ModalInput from './ModalInput'
+import ModalTextarea from './ModalTextarea'
 import SelectButton from './SelectButton'
 
 const ContactModal: FC = () => {
@@ -42,7 +44,9 @@ const ContactModal: FC = () => {
 					<h1 className='text-4xl text-center'>{"Let's talk"}</h1>
 				</div>
 				<div className='w-[45%] h-full bg-[#010001] p-12 text-dark-gray text-sm'>
-					<h3 className='mb-3'>{"I'm interested in..."}</h3>
+					<h3 className='mb-3 text-dark-gray-hover'>
+						{"I'm interested in..."}
+					</h3>
 					<div className='flex flex-wrap gap-3'>
 						{btnsArr.map(btn => (
 							<SelectButton
@@ -53,6 +57,12 @@ const ContactModal: FC = () => {
 							/>
 						))}
 					</div>
+					<ModalInput placeholder='Your name' type='text' />
+					<ModalInput placeholder='Your email' type='email' />
+					<ModalTextarea placeholder='Your message' />
+					<button className='bg-white rounded-sm text-black font-semibold py-2 px-2.5 hover:bg-transparent hover:border-violet-400 hover:text-violet-400 border-[.15rem] border-white transition duration-300 mt-6 text-[.8rem] ml-[.1rem]'>
+						Send a request
+					</button>
 				</div>
 			</motion.div>
 		</section>
