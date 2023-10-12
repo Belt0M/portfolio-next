@@ -58,10 +58,16 @@ export const skillsData: ISkill[] = [
 		level: ESkillLevels.beginner,
 	},
 	{
-		icon: '/icons/gsap.svg',
-		name: 'GSAP',
+		icon: '/icons/framer.svg',
+		name: 'Framer Motion',
 		level: ESkillLevels.beginner,
-		size: 35,
+	},
+	{
+		icon: '/icons/threejs.svg',
+		name: 'Three.js',
+		level: ESkillLevels.beginner,
+		size: 40,
+		bg: 'dark:bg-white rounded-full',
 	},
 ]
 
@@ -79,6 +85,11 @@ export const toolsData: ISkill[] = [
 	{
 		icon: '/icons/figma.png',
 		name: 'Figma',
+		level: ESkillLevels.intermediate,
+	},
+	{
+		icon: '/icons/adobeps.png',
+		name: 'Photoshop',
 		level: ESkillLevels.intermediate,
 	},
 ]

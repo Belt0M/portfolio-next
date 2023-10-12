@@ -9,4 +9,5 @@ export interface ISkill {
 	name: string
 	level: ESkillLevels
 	size?: number
+	bg?: string
 }
