@@ -13,7 +13,7 @@ export const projectsData: IProject[] = [
 	{
 		img: '/img/project2.jpg',
 		name: 'Blockchain website',
-		desc: 'Website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
+		desc: 'Freelance Blockchain Company landing page, created in a common web stack.',
 		stack: ['HTML', 'SCSS', 'JavaScript'],
 		date: new Date('2022.07.22'),
 	},
@@ -27,5 +27,27 @@ export const projectsData: IProject[] = [
 			website: 'https://belt0m-dashboard.vercel.app/',
 		},
 		date: new Date('2022.12.15'),
+	},
+	{
+		img: '/img/project4.png',
+		name: 'Aventu Editor',
+		desc: 'The application was created with the possibility of creating your own books or stories and subsequently creating your own plot and voiceover using the React Flow editor.',
+		stack: ['React', 'TypeScript', 'Tailwind', 'RTK Query', 'React Flow'],
+		// links: {
+		// 	git: 'https://github.com/Belt0M/dashboard',
+		// 	website: 'https://belt0m-dashboard.vercel.app/',
+		// },
+		date: new Date('2023.10.25'),
+	},
+	{
+		img: '/img/project5.png',
+		name: 'EIOTClub Website',
+		desc: 'The website for EIOTClub, which delivers SIM cards for IoT devices.',
+		stack: ['Next.js', 'TypeScript', 'Tailwind'],
+		links: {
+			git: 'https://github.com/Belt0M/eiotclub',
+			website: 'https://www.eiotclub.com/',
+		},
+		date: new Date('2023.10.25'),
 	},
 ]

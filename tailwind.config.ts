@@ -26,6 +26,7 @@ const config: Config = {
 				'stack-2': '#A742D4',
 				'stack-3': '#E554EB',
 				'stack-4': '#D44294',
+				'stack-5': '#d44251',
 			},
 			boxShadow: {
 				'lg-center': '0 0 50px 10px rgba(139, 92, 246, 0.3)',

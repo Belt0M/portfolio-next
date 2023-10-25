@@ -34,7 +34,7 @@ export const skillsData: ISkill[] = [
 	{
 		icon: '/icons/next.png',
 		name: 'Next.js',
-		level: ESkillLevels.intermediate,
+		level: ESkillLevels.beginner,
 		size: 50,
 	},
 	{
