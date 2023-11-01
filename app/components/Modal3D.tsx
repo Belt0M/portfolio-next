@@ -1,9 +1,10 @@
 const Modal3D = () => {
 	return (
-		<mesh>
-			<boxBufferGeometry attach='geometry' />
-			<meshLambertMaterial attach='material' color='#fff' />
-		</mesh>
+		<></>
+		// <mesh>
+		// 	<boxBufferGeometry attach='geometry' />
+		// 	<meshLambertMaterial attach='material' color='#fff' />
+		// </mesh>
 	)
 }
 

@@ -1,6 +1,5 @@
 'use client'
 import emailjs from '@emailjs/browser'
-import { Canvas } from '@react-three/fiber'
 import { motion } from 'framer-motion'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { FC, MouseEvent, useEffect, useState } from 'react'
@@ -8,7 +7,6 @@ import { AiOutlineClose } from 'react-icons/ai'
 import { btnsArr } from '../data/contact.data'
 import { modalWindowVariants } from '../framer/modal.variants'
 import { IFormData } from '../types/IFormData'
-import Modal3D from './Modal3D'
 import ModalInput from './ModalInput'
 import ModalSubmit from './ModalSubmit'
 import ModalTextarea from './ModalTextarea'
@@ -78,9 +76,9 @@ const ContactModal: FC = () => {
 				/>
 				<div className='flex items-center justify-center md:w-1/2 w-full md:h-full h-1/4 md:mt-0 mt-2'>
 					<h1 className='text-4xl text-center'>{"Let's talk"}</h1>
-					<Canvas>
+					{/* <Canvas>
 						<Modal3D />
-					</Canvas>
+					</Canvas> */}
 				</div>
 				<form
 					className='md:w-[45%] w-full h-[80%] md:h-full dark:bg-[#010001] bg-sub-light-bg shadow-dark-center sm:p-12 p-8 dark:text-dark-gray text-zinc-400 text-sm'
