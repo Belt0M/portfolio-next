@@ -1,5 +1,7 @@
 'use client'
 import emailjs from '@emailjs/browser'
+import { OrbitControls } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
 import { motion } from 'framer-motion'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { FC, MouseEvent, useEffect, useState } from 'react'
@@ -11,6 +13,7 @@ import ModalInput from './ModalInput'
 import ModalSubmit from './ModalSubmit'
 import ModalTextarea from './ModalTextarea'
 import SelectButton from './SelectButton'
+import SphereGroup3D from './SphereGroup3D'
 
 const ContactModal: FC = () => {
 	const params = useSearchParams()
@@ -74,11 +77,16 @@ const ContactModal: FC = () => {
 					className='absolute sm:top-3 sm:right-3 top-4 right-4 text-zinc-400 sm:text-base text-xl cursor-pointer hover:scale-110 dark:hover:text-white hover:text-black transition duration-300 z-50'
 					onClick={() => changeParams()}
 				/>
-				<div className='flex items-center justify-center md:w-1/2 w-full md:h-full h-1/4 md:mt-0 mt-2'>
-					<h1 className='text-4xl text-center'>{"Let's talk"}</h1>
-					{/* <Canvas>
-						<Modal3D />
-					</Canvas> */}
+				<div className='relative flex items-center justify-center md:w-1/2 w-full md:h-full h-1/4 md:mt-0 mt-2'>
+					<Canvas camera={{ position: [15, 0, -10] }}>
+						<OrbitControls maxDistance={20} minDistance={10} />
+						<directionalLight />
+						<pointLight position={[-30, 0, -30]} power={10} />
+						<SphereGroup3D />
+					</Canvas>
+					<h1 className='absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] dark:text-slate-200 text-black font-medium text-2xl md:text-4xl pointer-events-none'>
+						{"Let's talk"}
+					</h1>
 				</div>
 				<form
 					className='md:w-[45%] w-full h-[80%] md:h-full dark:bg-[#010001] bg-sub-light-bg shadow-dark-center sm:p-12 p-8 dark:text-dark-gray text-zinc-400 text-sm'
